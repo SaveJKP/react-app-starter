@@ -1,3 +1,46 @@
-@import "tailwindcss";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
+@theme {
+  /* //build-in utility theme
+  --color-*: intitial;
+  --font-*: intitial;
+  --text-*: intitial;
+  --font-weight-*: intitial;
+  --tracking-*: intitial;
+  --leading-*: intitial;
+  --breakpoint-*: intitial;
+  --container-*: intitial;
+  --spacing-*: intitial;
+  --radius-*: intitial;
+  --shadow-*: intitial;
+  --inset-shadow-*: intitial;
+  --drop-shadow-*: intitial;
+  --blur-*: intitial;
+  --perspective-*: intitial;
+  --aspect-*: intitial;
+  --ease-*: intitial;
+  --animate-*: intitial;
+  //custome utility  theme
+  --theme-color: #000;
+  --theme-font: 'Roboto', sans-serif; */
+}
+
+@layer base {
+  body {
+    @variant sm {
+      @apply bg-gray-900 text-white;
+    }
+    @variant md {
+      @apply bg-gray-500;
+    }
+  }
+}
+@layer components {
+    .btn {
+        @apply bg-blue-500 text-white;
+    }
+}
 

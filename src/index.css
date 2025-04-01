@@ -22,25 +22,20 @@
   --perspective-*: intitial;
   --aspect-*: intitial;
   --ease-*: intitial;
-  --animate-*: intitial;
-  //custome utility  theme
-  --theme-color: #000;
-  --theme-font: 'Roboto', sans-serif; */
+  --animate-*: intitial; */
+  --breakpoint-sm: 320px;
+  --breakpoint-md: 728px;
+  --breakpoint-lg: 1440px;
+
+  /* custome theme */
+  --widht-min: 474px;
+  --widht-max: 1000px;
 }
 
 @layer base {
-  body {
-    @variant sm {
-      @apply bg-gray-900 text-white;
-    }
-    @variant md {
-      @apply bg-gray-500;
-    }
-  }
 }
 @layer components {
-    .btn {
-        @apply bg-blue-500 text-white;
-    }
+  .container__div {
+    @apply mx-auto w-full max-w-(--widht-max) min-w-(--widht-min);
+  }
 }
-

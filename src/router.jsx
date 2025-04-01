@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./components/Home";
-import ErrorHandling from "./components/ErrorHandling";
-import LoadingHandling from "./components/LoadingHandling";
-import UserProfile from "./components/๊UserProfile";
-import Contact from "./components/Contact";
-import Product from "./components/Product";
-import About from "./components/About";
+import Home from "./pages/Home";
+import ErrorHandling from "./pages/ErrorHandling";
+import LoadingHandling from "./pages/LoadingHandling";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
+import About from "./pages/About";
+import UserProfile from "./pages/UserProfile";
+import ProductDetail from "./pages/ProductDetail"; 
+import PokemonSearch from "./components/PokemonSearchAxios";
 
 const router = createBrowserRouter([
   {
@@ -16,10 +18,12 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
-      { path: "product", element:<Product />},
+      { path: "products", element:<Products />},
+      { path: "products/:productId", element: <ProductDetail /> },
       { path: "error-handling", element: <ErrorHandling /> },
       { path: "user/:userId", element: <UserProfile /> },
       { path: "loading-handling", element: <LoadingHandling /> },
+      { path: "pokemon-search", element: <PokemonSearch /> },
     ],
   },
 ]);

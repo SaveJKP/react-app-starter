@@ -27,13 +27,22 @@
   --breakpoint-md: 728px;
   --breakpoint-lg: 1440px;
 
+  --color-primary: #ff0000;
+  --color-secondary: #00ff00;
+  --color-tertiary: #0000ff;
+
+  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-family-mono: Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+
   /* custome theme */
-  --widht-min: 474px;
+  --widht-min: 320px;
   --widht-max: 1000px;
 }
 
-@layer base {
-}
 @layer components {
   .container__div {
     @apply mx-auto w-full max-w-(--widht-max) min-w-(--widht-min);
